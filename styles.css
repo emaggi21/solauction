@@ -1,0 +1,480 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*Email subcription banner*/
+.announcement-banner {
+    background-color: #007BFF; /* Choose a color that fits your site's theme */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.banner-content p {
+    margin: 10px 20px;
+}
+
+#subscribeForm {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#subscribeForm input[type="email"] {
+    width: 250px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#subscribeForm button {
+    background-color: #8bf6e4; /* A bright color to attract clicks */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: black; /* Ensures text is readable */
+}
+
+#subscribeForm button:hover {
+    background-color: #8bf6e4;
+}
+
+/* Field Focus Highlighting */
+#subscribeForm input[type="email"]:focus {
+    outline: none;
+    border: 2px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #subscribeForm input[type="email"], #subscribeForm button {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+}
+
+
+
+
+/*Nav Bar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbfafa;
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment for the logo and text */
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-container span {
+    font-size: 20px; /* Adjust size as needed */
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.search-container input {
+    width: 100%; 
+    background-color: #CDFEF6;
+    padding: 8px;
+    margin-right: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-btn {
+    background-color: #CDFEF6;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.user-controls button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #008cba;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin-left: 5px; 
+}
+
+
+body.no-scroll {
+    overflow: hidden;  /* Prevents scrolling */
+    height: 100%;      /* Limits the body height to the viewport */
+}
+
+.popup-logo {
+    display: block;  /* Makes it easier to center the image */
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin: 0 auto 20px; /* Centers the logo and adds some space below it */
+}
+
+.login-popup {
+    position: fixed;
+    width: 100%;      
+    height: 100%;     
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;     /* High z-index to ensure it's on top */
+}
+
+
+.login-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+
+.wallet-button {
+    background-color: #CDFEF6;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.wallet-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Featured Grid */
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line as needed */
+    justify-content: space-around;
+    gap: 30px; /* Increase gap to provide more space between items */
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(33.33% - 60px); /* Adjusts size based on gap, increase width */
+    height: 450px; /* Increase fixed height for all grid items */
+    background-color: white; /* Optional: adds background color */
+    border-radius: 10px; /* Increases border radius for a smoother edge */
+    padding: 30px; /* Increases padding for more internal space */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1), /* Increases shadow for more depth */
+                0 4px 8px rgba(0, 0, 0, 0.1);  /* Balanced bottom shadow */
+    overflow: hidden; /* Hides overflow content */
+}
+
+.grid-item img {
+    width: 100%; /* Ensures image covers the width */
+    max-height: 200px; /* Increases max height for images */
+    object-fit: cover; /* Ensures cover fit without distorting aspect ratio */
+    border-radius: 10px 10px 0 0; /* Rounds top corners */
+}
+
+.grid-item h3, .grid-item p, .grid-item a {
+    margin: 15px 0; /* Increases spacing for better visual separation */
+}
+
+.grid-item a {
+    align-self: center; /* Centers button/link in the space */
+    background-color: #8bf6e4;
+    color: #333;
+    padding: 12px 24px; /* Increase padding for a larger button */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.grid-item h3 {
+    flex-grow: 0; /* Prevents header from growing */
+}
+
+.grid-item p {
+    flex-grow: 1; /* Allows the paragraph to expand and fill the space */
+    color: #666;
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis when text is too long */
+}
+
+
+
+
+/* DAO section */
+.proposal-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.proposal-tag {
+    font-size: 16px;
+    color: #555;
+    background-color: #8bf6e4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: left; /* Align text to the left */
+    position: absolute; /* Position it absolutely relative to its parent */
+    top: 10px; /* Adjust this value as needed */
+    left: 20px; /* Align it to the left with appropriate spacing */
+}
+
+
+
+.proposal-title {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px; /* Add top margin to give space below the tag */
+}
+
+.proposal-description {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0 20px;
+}
+
+.vote-progress {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps children elements inside the boundary */
+}
+
+.vote-favor {
+    padding: 10px;
+    color: #333;
+    text-align: center;
+}
+.vote-against {
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.vote-favor {
+    background-color: #CDFEF6; /* Tiffany color for favor votes */
+    float: left;
+}
+
+.vote-against {
+    background-color: #f86b6b; /* Violet color for against votes */
+    float: right;
+}
+
+.vote-button {
+    display: block;
+    background-color: #8bf6e4;
+    color: #333;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+/* Image gallery */
+.gallery-container {
+    margin-top: 20px;
+    width: 100%; /* Ensures the container takes full width */
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 24px; /* Large font size for visibility */
+    color: #333; /* Dark grey color for the text */
+    margin-bottom: 20px; /* Adequate spacing between the title and the gallery */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px 0; /* Padding for visual space around images */
+}
+
+.gallery-item {
+    transition: transform 0.3s ease;
+    margin: 10px;
+    flex: 0 0 18%; /* Adjusts the size of each gallery item */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+/* Categories */
+.categories-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;  /* Optional background color for visual separation */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-item {
+    width: calc(16.66% - 20px); /* Calculates width for 6 items per row accounting for gap */
+    height: 200px; /* Fixed height for each category item */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: #ffffff; /* Adds background color for each item */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.category-item img {
+    width: 80px; /* Consistent width for all images */
+    height: 80px; /* Consistent height for all images */
+    object-fit: contain; /* Ensures images fit within dimensions without distortion */
+    margin-bottom: 10px;
+}
+
+.category-name {
+    font-size: 16px;
+    color: #666;
+    overflow: hidden; /* Ensures text does not overflow */
+    white-space: nowrap; /* Prevents text wrapping */
+    text-overflow: ellipsis; /* Adds ellipsis if text is too long */
+}
+
+
+
+
+
+/*Footer*/
+.footer {
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
