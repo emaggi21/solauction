@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolAuction</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SolAuction - An online platform for auctioning rare and exclusive items.">
+    <meta name="keywords" content="auction, rare items, collectibles, digital goods, SolAuction">
+    <meta name="author" content="SolAuction">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SolAuction">
+    <meta property="og:description" content="An online platform for auctioning rare and exclusive items.">
+    <meta property="og:image" content="Images/SolAuctionLG.png">
+    <meta property="og:url" content="https://emaggi21.github.io/solauction">
+    <meta property="og:type" content="website">
+    <script src="script.js" defer></script>
 </head>
-<script src="script.js"></script>
 <body>
-    <!-- Email subcription banner -->
+    <!-- Email Subscription Banner -->
     <div class="announcement-banner">
         <div class="banner-content">
             <p>Our app is coming soon! Sign up to receive updates and be the first to know when we launch.</p>
-            <form id="subscribeForm">
-                <input type="email" placeholder="Enter your email" required>
+            <form id="subscribeForm" action="https://formspree.io/f/xanwwyqe" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Notify Me</button>
             </form>
         </div>
@@ -22,53 +32,52 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="Images/SA-logo.png" alt="Solauction Logo">
+                <img src="Images/SolAuctionLG.png" alt="SolAuction Logo">
                 <span>SolAuction</span>
             </div>
             <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#categories">Categories</a>
-                <a href="#dao">Dao</a>
-                <a href="#sell">Sell</a>
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="dao.html">DAO</a>
+                <a href="sell.html">Sell</a>
             </div>
             <div class="search-container">
-                <input type="text" placeholder="Search for any product...">
+                <input type="text" placeholder="Search for any product..." aria-label="Search for any product">
                 <button class="search-btn">🔍</button>
             </div>
             <div class="user-controls">
-                <button class="message-btn">✉️</button>
-                <button class="notification-btn">🔔</button>
-                <button class="login-btn">Login👤</button>
+                <button class="message-btn" aria-label="Messages">✉️</button>
+                <button class="notification-btn" aria-label="Notifications">🔔</button>
+                <button class="login-btn" aria-label="Login">👤</button>
             </div>
+            <button class="menu-toggle" aria-label="Menu">&#9776;</button>
         </nav>
 
         <!-- Login Popup -->
         <div id="loginPopup" class="login-popup" style="display: none;">
             <div class="login-content">
-                <span class="close-btn"> &times; </span> <!-- Close button -->
-                <img src="Images/SA-logo.png" alt="Solauction Logo" class="popup-logo">
+                <span class="close-btn" aria-label="Close">&times;</span>
+                <img src="Images/SolAuctionLG.png" alt="SolAuction Logo" class="popup-logo">
                 <h2>Connect to SolAuction</h2>
-                <button class="wallet-button" onclick="connectWallet('Metamask')">Connect Metamask</button>
-                <button class="wallet-button" onclick="connectWallet('Coinbase')">Connect Coinbase</button>
-                <button class="wallet-button" onclick="connectWallet('WalletConnect')">Connect WalletConnect</button>
+                <button class="wallet-button" onclick="connectWallet('Phantom')">Connect Phantom</button>
+                <button class="wallet-button" onclick="connectWallet('Solflare')">Connect Solflare</button>
+                <button class="wallet-button" onclick="connectWallet('WalletConnect')">Other Wallet</button>
             </div>
         </div>
-
-
     </header>
 
-    <!-- featured grid -->
-    <div class="feature-grid">
+    <!-- Featured Grid -->
+    <section class="feature-grid">
         <div class="grid-item">
             <img src="Images/image1.png" alt="Rare Wines">
             <h3>Rare Wines</h3>
-            <p>Explore exclusive art pieces from renowned artists.</p>
+            <p>Explore world's finest wine selection.</p>
             <a href="#Wines">Discover More</a>
         </div>
         <div class="grid-item">
             <img src="Images/whitehoodie.png" alt="Rare Collectibles">
             <h3>Exclusive Pieces</h3>
-            <p>Find one-of-a-kind items and expand your collection.</p>
+            <p>Find high end clothing to add to your closet.</p>
             <a href="#collectibles">Discover More</a>
         </div>
         <div class="grid-item">
@@ -77,10 +86,10 @@
             <p>Dive into the world of digital art and virtual goods.</p>
             <a href="#digital">Discover More</a>
         </div>
-    </div>
+    </section>
 
-    <!-- DAO section -->
-    <div class="proposal-section">
+    <!-- DAO Section -->
+    <section class="proposal-section">
         <div class="proposal-tag" id="proposalTag">User Proposal</div>
         <h2 class="proposal-title" id="proposalTitle">Request for DAO Intervention on Fraudulent Transaction Involving Re-bottled Wine</h2>
         <p class="proposal-description" id="proposalDescription">As a member of our community and a recent victim of a fraudulent transaction where I was deceitfully sent a re-bottled wine instead of the authentic product advertised, I am proposing an urgent review and resolution of this matter by the DAO. This incident not only resulted in...</p>
@@ -88,18 +97,11 @@
             <div class="vote-favor" id="voteFavor" style="width: 95%;">95%</div>
             <div class="vote-against" id="voteAgainst" style="width: 5%;">5%</div>
         </div>
-        <a href="#dao" class="vote-button">Vote Now</a>
-    </div>
+        <a href="dao.html" class="vote-button">Vote Now</a>
+    </section>
 
-
-    
-
-
-
-
-
-    <!-- Recommended for you -->
-    <div class="gallery-container">
+    <!-- Recommended for You -->
+    <section class="gallery-container">
         <h2 class="gallery-title">Recommended for You</h2>
         <div class="image-gallery">
             <div class="gallery-item">
@@ -123,65 +125,43 @@
                 <div class="title">Red Wine 2001</div>
             </div>
         </div>
-    </div>
+    </section>
     
     <!-- Categories -->
-    <div class="categories-section">
+    <section class="categories-section">
         <h2 class="section-title">Browse Categories</h2>
         <div class="categories-grid">
             <div class="category-item" onclick="location.href='#art';">
-                <img src="Images/image1.png" alt="Art">
+                <img src="Images/image1.png" alt="Wine">
                 <div class="category-name">Wine</div>
             </div>
             <div class="category-item" onclick="location.href='#collectibles';">
                 <img src="Images/DigitalGoods.png" alt="Collectibles">
                 <div class="category-name">Collectibles</div>
             </div>
-            <!-- Repeat for other categories -->
             <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SA-logo.png" alt="Furniture">
+                <img src="Images/SolAuctionLG.png" alt="Watches">
                 <div class="category-name">Watches</div>
             </div>
             <div class="category-item" onclick="location.href='#jewelry';">
-                <img src="Images/SA-logo.png" alt="Jewelry">
+                <img src="Images/SolAuctionLG.png" alt="Clothing">
                 <div class="category-name">Clothing</div>
             </div>
             <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SA-logo.png" alt="Furniture">
+                <img src="Images/SolAuctionLG.png" alt="Jewelry">
                 <div class="category-name">Jewelry</div>
             </div>
-            <div class="category-item" onclick="location.href='#jewelry';">
-                <img src="Images/SA-logo.png" alt="Jewelry">
-                <div class="category-name">Forniture</div>
-            </div>
             <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SA-logo.png" alt="Furniture">
-                <div class="category-name">Coming Soon</div>
+                <img src="Images/SolAuctionLG.png" alt="Furniture">
+                <div class="category-name">Furniture</div>
             </div>
-            <div class="category-item" onclick="location.href='#jewelry';">
-                <img src="Images/SA-logo.png" alt="Jewelry">
-                <div class="category-name">Coming Soon</div>
-            </div>
-            <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SA-logo.png" alt="Furniture">
-                <div class="category-name">Coming Soon</div>
-            </div>
-            <div class="category-item" onclick="location.href='#jewelry';">
-                <img src="Images/SA-logo.png" alt="Jewelry">
-                <div class="category-name">Coming Soon</div>
-            </div>
-            <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SA-logo.png" alt="Furniture">
-                <div class="category-name">Coming Soon</div>
-            </div>
-            <div class="category-item" onclick="location.href='#jewelry';">
-                <img src="Images/SA-logo.png" alt="Jewelry">
+            <div class="category-item" onclick="location.href='#coming-soon';">
+                <img src="Images/SolAuctionLG.png" alt="Coming Soon">
                 <div class="category-name">Coming Soon</div>
             </div>
         </div>
-    </div>
+    </section>
     
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

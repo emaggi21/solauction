@@ -1,24 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Email subscription form submission
-    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var email = this.querySelector('input[type="email"]').value;
-        console.log("Email submitted:", email);
+    // Menu toggle for responsive navbar
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
 
-        // AJAX request to server
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "subscribe_endpoint", true); // Replace 'subscribe_endpoint' with your server endpoint
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                alert("Thank you for subscribing! We will notify you when we launch.");
-                document.getElementById('subscribeForm').reset();
-            } else if (xhr.readyState === 4) {
-                alert("There was an error submitting your request. Please try again.");
-            }
-        };
-        xhr.send(JSON.stringify({ email: email }));
-    });
+    if (menuToggle && navbar) {
+        menuToggle.addEventListener('click', function() {
+            navbar.classList.toggle('expanded');
+        });
+    }
 
     // Login popup handling
     const loginButton = document.querySelector('.login-btn');
@@ -26,23 +15,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector('.close-btn');
     const body = document.body; // Get the body element to apply no-scroll
 
-    loginButton.addEventListener('click', function() {
-        loginPopup.style.display = 'flex'; // Show the popup
-        body.classList.add('no-scroll'); // Stop scrolling on the body
-    });
+    if (loginButton && loginPopup && closeButton) {
+        loginButton.addEventListener('click', function() {
+            loginPopup.style.display = 'flex'; // Show the popup
+            body.classList.add('no-scroll'); // Stop scrolling on the body
+        });
 
-    closeButton.addEventListener('click', function() {
-        loginPopup.style.display = 'none'; // Hide the popup when close button is clicked
-        body.classList.remove('no-scroll'); // Allow scrolling again
-    });
+        closeButton.addEventListener('click', function() {
+            loginPopup.style.display = 'none'; // Hide the popup when close button is clicked
+            body.classList.remove('no-scroll'); // Allow scrolling again
+        });
+    }
 
     // Function to simulate connecting a wallet
     window.connectWallet = function(walletName) {
         console.log("Connecting to:", walletName);
         // Hide the popup after selection
-        loginPopup.style.display = 'none';
-        body.classList.remove('no-scroll'); // Allow scrolling again
-    }
+        if (loginPopup) {
+            loginPopup.style.display = 'none';
+            body.classList.remove('no-scroll'); // Allow scrolling again
+        }
+    };
 
     // Proposals data and update function
     const proposals = [
