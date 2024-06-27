@@ -15,11 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector('.close-btn');
     const body = document.body; // Get the body element to apply no-scroll
 
-    if (loginButton && loginPopup && closeButton) {
-        loginButton.addEventListener('click', function() {
+    function showLoginPopup() {
+        if (loginPopup) {
             loginPopup.style.display = 'flex'; // Show the popup
             body.classList.add('no-scroll'); // Stop scrolling on the body
-        });
+        }
+    }
+
+    if (loginButton && loginPopup && closeButton) {
+        loginButton.addEventListener('click', showLoginPopup);
 
         closeButton.addEventListener('click', function() {
             loginPopup.style.display = 'none'; // Hide the popup when close button is clicked
@@ -36,6 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('no-scroll'); // Allow scrolling again
         }
     };
+
+    // Add event listeners to all buttons that require login
+    const buttons = document.querySelectorAll('.vote-button, .submit-btn, .login-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', showLoginPopup);
+    });
 
     // Proposals data and update function
     const proposals = [

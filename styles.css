@@ -23,6 +23,13 @@ body, html {
     align-items: center;
 }
 
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Ensure the text color remains the same */
+}
+
 .logo-container img {
     height: 40px;
     margin-right: 10px;
@@ -220,6 +227,7 @@ body, html {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px;
+    margin-top: 20px;
 }
 
 .grid-item {
@@ -340,10 +348,11 @@ body, html {
     float: right;
 }
 
-.vote-button {
+/* New 'Go to DAO Page' button */
+.goto-dao-button {
     display: block;
-    background-color: #aaf0fa;
-    color: #333;
+    background-color: #007BFF;
+    color: #fff;
     text-align: center;
     padding: 10px 20px;
     margin-top: 20px;
@@ -352,11 +361,13 @@ body, html {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color 0.3s ease;
 }
 
-.vote-button:hover {
-    background-color: #aaf0fa;
+.goto-dao-button:hover {
+    background-color: #0056b3;
 }
+
 
 /* Image Gallery Styles */
 .gallery-container {
@@ -587,5 +598,316 @@ body.no-scroll {
 
 
 .wallet-button:hover {
+    background-color: #0056b3;
+}
+
+/* Categories Page *//* Categories Page *//* Categories Page */
+/* Categories Page *//* Categories Page *//* Categories Page */
+/* Categories Page *//* Categories Page *//* Categories Page */
+/* Categories Page *//* Categories Page *//* Categories Page */
+
+
+/* Padding for Intro Section */
+.categories-page-intro {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Centered Search Bar Section */
+.categories-search-bar-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.categories-search-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-search-container input {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+.categories-search-container .search-btn {
+    padding: 15px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.categories-search-container .search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Categories Page Section Styles */
+.categories-page-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.categories-page-section .section-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.categories-page-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-page-item {
+    width: calc(40% - 20px); /* Display two items per row */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Added padding for more content space */
+}
+
+.category-page-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.category-page-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.category-page-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.category-page-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.category-page-item a {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.category-page-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .category-page-item {
+        width: calc(100% - 20px); /* Display one item per row on smaller screens */
+    }
+}
+
+
+
+/* DAO Page *//* DAO Page *//* DAO Page */
+/* DAO Page *//* DAO Page *//* DAO Page */
+/* DAO Page *//* DAO Page *//* DAO Page */
+/* DAO Page *//* DAO Page *//* DAO Page */
+
+
+
+/* DAO Page Styles */
+.dao-intro, .voting-process, .submit-proposal {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dao-intro h1, .voting-process h2, .submit-proposal h2 {
+    text-align: center;
+    color: #333;
+}
+
+.dao-intro p, .voting-process p, .submit-proposal p {
+    text-align: center;
+    color: #666;
+}
+
+.vote-button, .submit-btn, .login-btn {
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vote-button:hover, .submit-btn:hover, .login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Active Proposals Section */
+.active-proposals {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.active-proposals h2 {
+    text-align: center;
+    color: #333;
+}
+
+.proposal-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.proposal-item h3 {
+    margin: 10px 0;
+}
+
+.proposal-item p {
+    color: #666;
+}
+
+.vote-progress {
+    display: flex;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.vote-favor, .vote-against {
+    padding: 10px;
+    text-align: center;
+}
+
+.vote-favor {
+    background-color: #aaf0fa;
+    color: #333;
+    flex-grow: 1;
+}
+
+.vote-against {
+    background-color: #f14e4e;
+    color: white;
+    flex-grow: 1;
+}
+
+
+/* Sell Page *//* Sell Page *//* Sell Page */
+/* Sell Page *//* Sell Page *//* Sell Page */
+/* Sell Page *//* Sell Page *//* Sell Page */
+/* Sell Page *//* Sell Page *//* Sell Page */
+
+
+/* Sell Page Styles */
+.sell-intro {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.selling-steps {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.selling-steps h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.selling-steps ol {
+    padding-left: 20px;
+}
+
+.sell-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sell-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
     background-color: #0056b3;
 }

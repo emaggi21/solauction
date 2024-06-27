@@ -12,7 +12,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="SolAuction">
     <meta property="og:description" content="An online platform for auctioning rare and exclusive items.">
-    <meta property="og:image" content="Images/SolAuctionLG.png">
+    <meta property="og:image" content="https://emaggi21.github.io/solauction/Images/SolAuctionLogo.png">
     <meta property="og:url" content="https://emaggi21.github.io/solauction">
     <meta property="og:type" content="website">
     <script src="script.js" defer></script>
@@ -26,14 +26,19 @@
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Notify Me</button>
             </form>
+            <p>Have questions? <a href="mailto:info@solauctionapp.com">Contact us</a></p>
         </div>
     </div>
     
+
+    <!-- NavBar -->
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="Images/SolAuctionLG.png" alt="SolAuction Logo">
-                <span>SolAuction</span>
+                <a href="index.html">
+                    <img src="Images/SolAuctionLogo.png" alt="SolAuction Logo">
+                    <span>SolAuction</span>
+                </a>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -57,7 +62,7 @@
         <div id="loginPopup" class="login-popup" style="display: none;">
             <div class="login-content">
                 <span class="close-btn" aria-label="Close">&times;</span>
-                <img src="Images/SolAuctionLG.png" alt="SolAuction Logo" class="popup-logo">
+                <img src="Images/SolAuctionLogo.png" alt="SolAuctionLogo" class="popup-logo">
                 <h2>Connect to SolAuction</h2>
                 <button class="wallet-button" onclick="connectWallet('Phantom')">Connect Phantom</button>
                 <button class="wallet-button" onclick="connectWallet('Solflare')">Connect Solflare</button>
@@ -97,7 +102,7 @@
             <div class="vote-favor" id="voteFavor" style="width: 95%;">95%</div>
             <div class="vote-against" id="voteAgainst" style="width: 5%;">5%</div>
         </div>
-        <a href="dao.html" class="vote-button">Vote Now</a>
+        <a href="dao.html" class="goto-dao-button">Go to DAO Page</a>
     </section>
 
     <!-- Recommended for You -->
@@ -140,23 +145,23 @@
                 <div class="category-name">Collectibles</div>
             </div>
             <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SolAuctionLG.png" alt="Watches">
+                <img src="Images/SolAuctionLogo.png" alt="Watches">
                 <div class="category-name">Watches</div>
             </div>
             <div class="category-item" onclick="location.href='#jewelry';">
-                <img src="Images/SolAuctionLG.png" alt="Clothing">
+                <img src="Images/SolAuctionLogo.png" alt="Clothing">
                 <div class="category-name">Clothing</div>
             </div>
             <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SolAuctionLG.png" alt="Jewelry">
+                <img src="Images/SolAuctionLogo.png" alt="Jewelry">
                 <div class="category-name">Jewelry</div>
             </div>
             <div class="category-item" onclick="location.href='#furniture';">
-                <img src="Images/SolAuctionLG.png" alt="Furniture">
+                <img src="Images/SolAuctionLogo.png" alt="Furniture">
                 <div class="category-name">Furniture</div>
             </div>
             <div class="category-item" onclick="location.href='#coming-soon';">
-                <img src="Images/SolAuctionLG.png" alt="Coming Soon">
+                <img src="Images/SolAuctionLogo.png" alt="Coming Soon">
                 <div class="category-name">Coming Soon</div>
             </div>
         </div>
@@ -169,7 +174,7 @@
             <div class="footer-links">
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
-                <a href="#contact">Contact Us</a>
+                <a href="mailto:info@solauctionapp.com">Contact Us</a>
             </div>
         </div>
     </footer>

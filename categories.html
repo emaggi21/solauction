@@ -10,18 +10,16 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="Images/SolAuctionLG.png" alt="SolAuction Logo">
-                <span>SolAuction</span>
+                <a href="index.html">
+                    <img src="Images/SolAuctionLogo.png" alt="SolAuction Logo">
+                    <span>SolAuction</span>
+                </a>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="categories.html">Categories</a>
                 <a href="dao.html">DAO</a>
                 <a href="sell.html">Sell</a>
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search for any product...">
-                <button class="search-btn">🔍</button>
             </div>
             <div class="user-controls">
                 <button class="message-btn" aria-label="Messages">✉️</button>
@@ -33,55 +31,63 @@
     </header>
 
     <main>
-        <h1>Categories</h1>
-        <p>This is the categories page. You can list different categories of products here.</p>
+        <section class="categories-page-intro">
+            <h1>Categories</h1>
+            <p>Browse through our diverse categories to find exclusive items.</p>
+        </section>
+        
+        <section class="categories-search-bar-section">
+            <div class="categories-search-container">
+                <input type="text" placeholder="Search for any product..." aria-label="Search for any product">
+                <button class="search-btn">🔍</button>
+            </div>
+        </section>
+
         <!-- Categories -->
-        <section class="categories-section">
+        <section class="categories-page-section">
             <h2 class="section-title">Browse Categories</h2>
-            <div class="categories-grid">
-                <div class="category-item" onclick="location.href='#art';">
+            <div class="categories-page-grid">
+                <div class="category-page-item" onclick="location.href='#wine';">
                     <img src="Images/image1.png" alt="Wine">
-                    <div class="category-name">Wine</div>
+                    <div class="category-page-name">Wine</div>
+                    <p>Discover a selection of the finest wines from around the world.</p>
+                    <a href="#wine">Explore Wines</a>
                 </div>
-                <div class="category-item" onclick="location.href='#collectibles';">
+                <div class="category-page-item" onclick="location.href='#collectibles';">
                     <img src="Images/DigitalGoods.png" alt="Collectibles">
-                    <div class="category-name">Collectibles</div>
+                    <div class="category-page-name">Collectibles</div>
+                    <p>Find unique and rare collectibles to add to your collection.</p>
+                    <a href="#collectibles">Explore Collectibles</a>
                 </div>
-                <div class="category-item" onclick="location.href='#furniture';">
-                    <img src="Images/SolAuctionLG.png" alt="Watches">
-                    <div class="category-name">Watches</div>
+                <div class="category-page-item" onclick="location.href='#watches';">
+                    <img src="Images/SolAuctionLogo.png" alt="Watches">
+                    <div class="category-page-name">Watches</div>
+                    <p>Explore a range of luxury watches from top brands.</p>
+                    <a href="#watches">Explore Watches</a>
                 </div>
-                <div class="category-item" onclick="location.href='#jewelry';">
-                    <img src="Images/SolAuctionLG.png" alt="Clothing">
-                    <div class="category-name">Clothing</div>
+                <div class="category-page-item" onclick="location.href='#clothing';">
+                    <img src="Images/SolAuctionLogo.png" alt="Clothing">
+                    <div class="category-page-name">Clothing</div>
+                    <p>Shop for high-end clothing and fashion accessories.</p>
+                    <a href="#clothing">Explore Clothing</a>
                 </div>
-                <div class="category-item" onclick="location.href='#furniture';">
-                    <img src="Images/SolAuctionLG.png" alt="Jewelry">
-                    <div class="category-name">Jewelry</div>
+                <div class="category-page-item" onclick="location.href='#jewelry';">
+                    <img src="Images/SolAuctionLogo.png" alt="Jewelry">
+                    <div class="category-page-name">Jewelry</div>
+                    <p>Browse through exquisite jewelry pieces.</p>
+                    <a href="#jewelry">Explore Jewelry</a>
                 </div>
-                <div class="category-item" onclick="location.href='#furniture';">
-                    <img src="Images/SolAuctionLG.png" alt="Furniture">
-                    <div class="category-name">Furniture</div>
+                <div class="category-page-item" onclick="location.href='#furniture';">
+                    <img src="Images/SolAuctionLogo.png" alt="Furniture">
+                    <div class="category-page-name">Furniture</div>
+                    <p>Discover antique and modern furniture.</p>
+                    <a href="#furniture">Explore Furniture</a>
                 </div>
-                <div class="category-item" onclick="location.href='#coming-soon';">
-                    <img src="Images/SolAuctionLG.png" alt="Coming Soon">
-                    <div class="category-name">Coming Soon</div>
-                </div>
-                <div class="category-item" onclick="location.href='#coming-soon';">
-                    <img src="Images/SolAuctionLG.png" alt="Coming Soon">
-                    <div class="category-name">Coming Soon</div>
-                </div>
-                <div class="category-item" onclick="location.href='#coming-soon';">
-                    <img src="Images/SolAuctionLG.png" alt="Coming Soon">
-                    <div class="category-name">Coming Soon</div>
-                </div>
-                <div class="category-item" onclick="location.href='#coming-soon';">
-                    <img src="Images/SolAuctionLG.png" alt="Coming Soon">
-                    <div class="category-name">Coming Soon</div>
-                </div>
-                <div class="category-item" onclick="location.href='#coming-soon';">
-                    <img src="Images/SolAuctionLG.png" alt="Coming Soon">
-                    <div class="category-name">Coming Soon</div>
+                <div class="category-page-item" onclick="location.href='#coming-soon';">
+                    <img src="Images/SolAuctionLogo.png" alt="Coming Soon">
+                    <div class="category-page-name">Coming Soon</div>
+                    <p>Stay tuned for upcoming categories and products.</p>
+                    <a href="#coming-soon">Learn More</a>
                 </div>
             </div>
         </section>
@@ -93,7 +99,7 @@
             <div class="footer-links">
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
-                <a href="#contact">Contact Us</a>
+                <a href="mailto:info@solauctionapp.com">Contact Us</a>
             </div>
         </div>
     </footer>

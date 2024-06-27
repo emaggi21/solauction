@@ -11,18 +11,16 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="Images/SolAuctionLG.png" alt="SolAuction Logo">
-                <span>SolAuction</span>
+                <a href="index.html">
+                    <img src="Images/SolAuctionLogo.png" alt="SolAuction Logo">
+                    <span>SolAuction</span>
+                </a>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="categories.html">Categories</a>
                 <a href="dao.html">DAO</a>
                 <a href="sell.html">Sell</a>
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search for any product...">
-                <button class="search-btn">🔍</button>
             </div>
             <div class="user-controls">
                 <button class="message-btn" aria-label="Messages">✉️</button>
@@ -34,6 +32,38 @@
     </header>
 
     <main>
+        <!-- Introduction Section -->
+        <section class="dao-intro">
+            <h1>Decentralized Autonomous Organization (DAO)</h1>
+            <p>Welcome to the SolAuction DAO. Here, our community members have the power to make decisions and shape the future of our platform through proposals and voting.</p>
+        </section>
+
+        <!-- Active Proposals Section -->
+        <section class="active-proposals">
+            <h2>Active Proposals</h2>
+            <div class="proposal-item">
+                <div class="proposal-tag">General DAO Proposal</div>
+                <h3>Proposal for New Art Auction Rules</h3>
+                <p>This proposal aims to revise the rules for art auction submissions to ensure greater artist diversity and representation in our marketplace.</p>
+                <div class="vote-progress">
+                    <div class="vote-favor" style="width: 75%;">75% In Favor</div>
+                    <div class="vote-against" style="width: 25%;">25% Against</div>
+                </div>
+                <button class="vote-button">Vote Now</button>
+            </div>
+            <div class="proposal-item">
+                <div class="proposal-tag">User Proposal</div>
+                <h3>Proposal for Lowering Commission Fees</h3>
+                <p>This proposal suggests lowering commission fees on sales to encourage more artists to join our platform.</p>
+                <div class="vote-progress">
+                    <div class="vote-favor" style="width: 55%;">55% In Favor</div>
+                    <div class="vote-against" style="width: 45%;">45% Against</div>
+                </div>
+                <button class="vote-button">Vote Now</button>
+            </div>
+        </section>
+
+        <!-- Example Proposal Section (Existing Proposal) -->
         <section class="proposal-section">
             <div class="proposal-tag" id="proposalTag">User Proposal</div>
             <h2 class="proposal-title" id="proposalTitle">Request for DAO Intervention on Fraudulent Transaction Involving Re-bottled Wine</h2>
@@ -42,8 +72,23 @@
                 <div class="vote-favor" id="voteFavor" style="width: 95%;">95%</div>
                 <div class="vote-against" id="voteAgainst" style="width: 5%;">5%</div>
             </div>
-            <a href="#dao" class="vote-button">Vote Now</a>
+            <button class="vote-button">Vote Now</button>
         </section>
+
+        <!-- Voting Process Section -->
+        <section class="voting-process">
+            <h2>How to Vote</h2>
+            <p>Voting on proposals is simple. Connect your wallet, review the active proposals, and cast your vote. Your vote helps shape the future of SolAuction.</p>
+            <button class="login-btn">Connect Wallet to Vote</button>
+        </section>
+
+        <!-- Submit Proposal Section -->
+        <section class="submit-proposal">
+            <h2>Submit a Proposal</h2>
+            <p>Have an idea or a suggestion to improve SolAuction? Submit a proposal for the community to review and vote on.</p>
+            <button class="submit-btn">Submit Proposal</button>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -52,9 +97,21 @@
             <div class="footer-links">
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
-                <a href="#contact">Contact Us</a>
+                <a href="mailto:info@solauctionapp.com">Contact Us</a>
             </div>
         </div>
     </footer>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="login-popup" style="display: none;">
+        <div class="login-content">
+            <span class="close-btn" aria-label="Close">&times;</span>
+            <img src="Images/SolAuctionLogo.png" alt="SolAuction Logo" class="popup-logo">
+            <h2>Connect to SolAuction</h2>
+            <button class="wallet-button" onclick="connectWallet('Phantom')">Connect Phantom</button>
+            <button class="wallet-button" onclick="connectWallet('Solflare')">Connect Solflare</button>
+            <button class="wallet-button" onclick="connectWallet('WalletConnect')">Other Wallet</button>
+        </div>
+    </div>
 </body>
 </html>
