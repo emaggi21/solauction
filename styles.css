@@ -896,7 +896,7 @@ body.no-scroll {
     box-sizing: border-box;
 }
 
-.submit-btn {
+.sell-submit-btn {
     display: block;
     width: 100%;
     padding: 10px 0;
@@ -908,6 +908,6 @@ body.no-scroll {
     transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
+.sell-submit-btn:hover {
     background-color: #0056b3;
 }
