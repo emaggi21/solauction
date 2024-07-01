@@ -6,6 +6,9 @@
     <title>Sell - SolAuction</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="Images/SolAuctionLogo.png" type="image/png">
 </head>
 <body>
     <header>
@@ -21,19 +24,32 @@
                 <a href="categories.html">Categories</a>
                 <a href="dao.html">DAO</a>
                 <a href="sell.html">Sell</a>
+                <a href="ios-app.html">iOS App</a>
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Search for any product...">
-                <button class="search-btn">🔍</button>
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="user-controls">
-                <button class="message-btn" aria-label="Messages">✉️</button>
-                <button class="notification-btn" aria-label="Notifications">🔔</button>
-                <button class="login-btn" aria-label="Login">👤</button>
+                <button class="login-btn" aria-label="Login"><i class="fa-solid fa-wallet"></i></button>
             </div>
             <button class="menu-toggle" aria-label="Menu">&#9776;</button>
         </nav>
     </header>
+
+        <!-- Sidebar for small screens -->
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="sidebar-search-container">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="dao.html">DAO</a>
+            <a href="sell.html">Sell</a>
+            <a href="ios-app.html">iOS App</a>
+        </div>
 
     <main>
         <section class="sell-intro">
@@ -93,7 +109,8 @@
             <div class="footer-links">
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
-                <a href="#contact">Contact Us</a>
+                <a href="mailto:info@solauctionapp.com">Contact Us</a>
+                <a href="https://x.com/SolAuctionApp" target="_blank"> Follow us on X</a>
             </div>
         </div>
     </footer>

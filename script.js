@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Menu toggle for responsive navbar
     const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.querySelector('.closebtn');
 
-    if (menuToggle && navbar) {
+    if (menuToggle) {
         menuToggle.addEventListener('click', function() {
-            navbar.classList.toggle('expanded');
+            sidebar.style.width = '250px';
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            sidebar.style.width = '0';
         });
     }
 

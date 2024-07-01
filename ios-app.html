@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS App - SolAuction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="Images/SolAuctionLogo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="Images/SolAuctionLogo.png" alt="SolAuction Logo">
+                    <span>SolAuction</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="categories.html">Categories</a>
+                <a href="dao.html">DAO</a>
+                <a href="sell.html">Sell</a>
+                <a href="ios-app.html">iOS App</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search for any product...">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="user-controls">
+                <button class="login-btn" aria-label="Login"><i class="fa-solid fa-wallet"></i></button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Sidebar for small screens -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidebar-search-container">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="dao.html">DAO</a>
+        <a href="sell.html">Sell</a>
+        <a href="ios-app.html">iOS App</a>
+    </div>
+
+    <main>
+        <section class="ios-app-preview">
+            <h1>SolAuction iOS App</h1>
+            <p>Get a sneak peek of our upcoming iOS app! Experience the best of SolAuction on your iPhone with seamless browsing and bidding.</p>
+            
+            <div class="app-features">
+                <div class="feature-item">
+                    <img src="Images/Blockchain-mobile.png" alt="Feature 1">
+                    <h2>Blockchain-Powered Market</h2>
+                    <p>A secure and transparent marketplace leveraging blockchain technology for the sale and purchase of high-value items, ensuring authenticity and trust in every transaction.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="Images/DAO-mobile.png" alt="Feature 2">
+                    <h2>DAO Governance</h2>
+                    <p>Decentralized Autonomous Organization (DAO) integration for community-driven decision-making, proposal voting, and rewards, fostering a participatory and democratic platform.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="Images/UserF-mobile.png" alt="Feature 3">
+                    <h2>Enhanced User Experience</h2>
+                    <p>Intuitive and user-friendly interface with seamless navigation, real-time notifications, and personalized recommendations, focusing on mobile usability for a premium user experience.</p>
+                </div>
+            </div>
+            
+            <div class="app-screenshots">
+                <h2>Visual Preview</h2>
+                <img src="Images/2.png" alt="Screenshot 2">
+                <img src="Images/3.png" alt="Screenshot 3">
+                <img src="Images/4.png" alt="Screenshot 4">
+                <img src="Images/5.png" alt="Screenshot 5">
+                <img src="Images/7.png" alt="Screenshot 7">
+            </div>
+            
+            <div class="app-download">
+                <h2>Coming Soon to the App Store</h2>
+                <img src="Images/App_Store.png" alt="App Store Badge">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 SolAuction. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="mailto:info@solauctionapp.com">Contact Us</a>
+                <a href="https://x.com/SolAuctionApp" target="_blank"> Follow us on X</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="login-popup" style="display: none;">
+        <div class="login-content">
+            <span class="close-btn" aria-label="Close">&times;</span>
+            <img src="Images/SolAuctionLogo.png" alt="SolAuction Logo" class="popup-logo">
+            <h2>Connect to SolAuction</h2>
+            <button class="wallet-button" onclick="connectWallet('Phantom')">Connect Phantom</button>
+            <button class="wallet-button" onclick="connectWallet('Solflare')">Connect Solflare</button>
+            <button class="wallet-button" onclick="connectWallet('WalletConnect')">Other Wallet</button>
+        </div>
+    </div>
+</body>
+</html>
